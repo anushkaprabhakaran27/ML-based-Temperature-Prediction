@@ -4,7 +4,8 @@ import pandas as pd
 #loading the trained model
 model=joblib.load("weather_model.pkl")
 
-print ("enter weather details:")
+print("\n🌦 Enter Weather Details")
+print("-" * 30)
 
 day_of_year=int(input("day of year(1-365):"))
 month=int(input("month(1-12):"))
@@ -28,5 +29,6 @@ new_data=pd.DataFrame({
 #predicting the temperature
 prediction=model.predict(new_data)
 
-print("\n--------Predicted Temperature--------")
-print(f"Predicted Temperature: {prediction[0]:.2f}°C")
+print("\n-------- Prediction Result --------")
+print(f"🌡 Predicted Temperature: {prediction[0]:.2f} °C")
+print("----------------------------------")
